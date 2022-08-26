@@ -25,20 +25,19 @@
     <main>
         <h2>¡Cotiza tu evento!</h2>
         <form action="https://formsubmit.co/cazuelaexpressmx@gmail.com" method="POST">
-            <input type="text" id="name" placeholder="Nombre" autocomplete="name">
-            <input type="text" id="last-name" placeholder="Apellidos" autocomplete="additional-name">
-            <input type="email" id="email" placeholder="Correo Electronico" autocomplete="email">
-            <input id="phone-number" placeholder="Numero Celular">
-            <select name="paquetes" id="paquetes-form" class="main-button">
+            <input type="text" id="name" placeholder="Nombre Completo" autocomplete="name" name="Nombre">
+            <input type="email" id="email" placeholder="Correo Electronico" autocomplete="email" name="Correo">
+            <input id="phone-number" placeholder="Numero Celular" name="Numero Celular">
+            <select name="paquetes" id="paquetes-form" class="main-button" name="Paquete Seleccionado">
                 <option value="paquete-taquiza">Paquete Taquiza</option>
                 <option value="paquete-taquiza">Paquete Taquiza</option>
             </select>
-            <input placeholder="Cantidad de personas">
+            <input placeholder="Cantidad de personas" name="Cantidad de Personas">
             <div class="fechaEntrega">
                 <p style="color: #fff;">Fecha de entrega</p>
-                <input type="date" id="date" value="Fecha de entrega">                
+                <input type="date" id="date" value="Fecha de entrega" name="Fecha de entrega">                
             </div>
-            <input type="text" placeholder="Dirección">
+            <input type="text" placeholder="Dirección" name="Dirección">
             <button type="submit" class="main-button">Cotizar</button>
         </form>
     </main>
