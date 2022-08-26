@@ -47,6 +47,7 @@ header{
     justify-content: space-between; */
     background: #000000;
     position: sticky;
+    padding-bottom: 15px;
 }
 .header-number{
     width: 100vw;

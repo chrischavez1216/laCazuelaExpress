@@ -52,3 +52,36 @@ main h2{
     font-size: 16px;
     font-weight: 400;
 }
+
+.gracias{
+    width: 320px;
+    margin-bottom: 10vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.gracias h2 {
+    font-size: 60px;
+}
+.gracias p {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 200s;
+}
+.gracias a {
+    margin-top: 20px;
+    text-align: center;
+    width: 70%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.gracias-main{
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+    url('../assets/img/platillos/alambre.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
