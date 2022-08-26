@@ -1,0 +1,54 @@
+main{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    color: var(--just-white);
+}
+button{
+    font-family: 'League Spartan', sans-serif;
+    border: none;
+}
+form{
+    border: 3px solid var(--soft-black);
+    border-radius: 5px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+    align-items:  center;
+    margin-bottom: 15vh;
+    height: auto;
+}
+form input{
+    background: var(--soft-black);
+    color: var(--just-white);
+    height: 30px;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'League Spartan', sans-serif;
+}
+form #paquetes-form{
+    border: none;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+}
+main h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.fechaEntrega{
+    width: 70%;
+    /* padding-left: 10px; */
+    padding-bottom: 8px;
+    text-align: center;
+}
+.fechaEntrega p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
