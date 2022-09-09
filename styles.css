@@ -16,6 +16,9 @@ html{
     font-family: 'League Spartan', sans-serif;
     background-color: var(--black);
 }
+.body {
+    max-width: 100vw;
+}
 .inactive{
     display: none;
 }
@@ -40,17 +43,19 @@ html{
 /* HEADER-SECTION---------- */
 header{
     height: 80px;
-    width: 100vw;
+    width: 100%;
     /* display: flex;
     flex-direction: column; */
     /* align-items: center;
     justify-content: space-between; */
     background: #000000;
-    position: sticky;
+    position: fixed;
     padding-bottom: 15px;
+    z-index: 1000;
 }
 .header-number{
-    width: 100vw;
+    margin: 0;
+    width: 100%;
     height: 15px;
     background: rgb(17, 16, 16);
     color: #FFFFFF;
@@ -60,17 +65,22 @@ header{
     align-items: center;
     justify-content: center;
 }
+.header-left ul {
+    display: none;
+}
 .main-header{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 .header-left{
     display: flex;
     height: 100%;
     align-items: center;
 }
+
 .header-left a img{
     width: 60px;
 }
@@ -83,36 +93,60 @@ header{
     cursor: pointer;
 }
 
-
+.mobile-menu{
+    width: 100%;
+    background: var(--black);
+    height: 25vh;
+    opacity: 90%;
+    text-align: center;
+}
+.mobile-menu ul{
+    height: 100%;
+    display: grid;
+    place-content: center;
+    gap: 20px;
+}
+.mobile-menu ul li{
+    list-style: none;
+}
+.mobile-menu ul li a{
+    text-decoration: none;
+    color: var(--just-white);
+    font-size: 16px;
+    font-weight: 600;
+    
+}
 /* HERO-SECTION---------- */
 main{
-    width: 100vw;
+    width: 100%;
 }
 .hero-section{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('./assets/img/platillos/longaniza-con-papas.jpg');
+    /* gap: 40px; */
+    background-image: linear-gradient(rgba(5, 7, 12, 0.55), rgba(5, 7, 12, 0.55)),
+    url('./assets/img/taquiza/tacosGuisado.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    border-bottom-left-radius:10%;
+    border-bottom-right-radius:10%;
 }
 .hero-section h1{
-    position: absolute;
-    font-size: 6rem;
+    font-size: 3.8rem;
     font-weight: bold;
     color: white;
     text-align: center;
-    top: 195px;
-    line-height: 3.3rem;
     text-shadow: 2px 2px var(--soft-black);
 }
+
 .hero-section img{
-    position: absolute;
     top: 280px;
     width: 300px;
+
 }
 
 /* PAQUETES-SECTION */
@@ -120,17 +154,39 @@ main{
 .paquetes-section{
     display: flex;
     flex-direction: column;
-}
-
-.paquetes-section_taquiza{
-    display: block;
+    justify-content: center;
     height: 100vh;
     margin-left: 30px;
+}
+.paquetes-section-card {
+    display: block;
+    height: 90%;
+    margin-top: 20px;
+    width: 320px;
+    padding: 25px;
     align-content: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid var(--soft-black);
+    border-radius: 20px;
+    text-align: center;
+    transition: .5s;
+    /* overflow: scroll; */
 }
+.paquetes-section-card:hover{
+    filter:contrast(90%);
+    border: 2px solid var(--secondary-yellow);
+}
+.paquetes-section_taquiza{
+    background: linear-gradient(rgba(5, 7, 12, 0.95), rgba(5, 7, 12, 0.95)),
+    url('./assets/img/taquiza/cazuelaTaquiza.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .paquetes-section_taquiza h2{
     font-size: 3.6rem;
     color: var(--just-white);
@@ -181,12 +237,14 @@ main{
 /* GUISADOS-CARDS */
 
 .guisados-section{
-    height: 100vh;
-    width: 100vw;
+    height: 110vh;
+    width: 100%;
     display: flex;
+    gap: 40px;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content:center;
     align-items: center;
+    position: relative;
 }
 .guisados-section h2{
     font-weight: 700;
@@ -198,37 +256,75 @@ main{
 .guisados-section__cards-container{
     display: flex;
     gap: 40px;
-    align-items: center;
-    /* justify-content: center; */
+    /* align-items: center;
+    justify-content: center; */
     width: 100%;
-    height: 500px;
+    height: 300px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity; 
+
 }
 .guisados-card{
-    width: 515px;
+    width: 215px;
     scroll-snap-align: center;
 }
 .guisados-card img{
-    width: 415px;
+    width: 215px;
     border-radius: 20px;
     border: solid 1.5px var(--main-orange);
 }
-/* .guisados-section a{
-    
-} */
+#lista-button-taquiza {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
 
+.lista-guisados{
+   /* height: 90vh; 
+   width: 70vw; */
+   position: absolute;
+   align-self: center;
+   justify-self: center;
+   text-align: center;
+   top: 250px;
+}
+.lista-guisados picture{
+    display: flex;
+    flex-direction: column;
+}
+.lista-guisados picture:nth-child(1){
+    width: 350px;
+}
+
+.lista-guisados .icon-close{
+    width: 24px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.icon-close{
+    cursor: pointer;
+}
 /* QUIENES SOMOS */
 
 .who-section{
-    height: 100vh;
+    width: 100%;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    height: 110vh;
     color: var(--just-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     align-items: center;
+    background:linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+    url('./assets/img/taquiza/cazuelaTaquiza2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .who-section h2{
@@ -251,12 +347,14 @@ main{
 /* FOOTER */
 
 footer{
+    border-top: 1px solid var(--main-orange);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
+    height: 160px;
     color: var(--just-white);
     text-align: center;
+    width: 100%;
 }
 
 footer img{
@@ -272,5 +370,81 @@ footer img{
 }
 
 
-/* COTIZACION--------------------------------------------------------------------------------------------- */
+@media (min-width: 800px){
+    body {
+        max-width: 100vw;
+    }
+    .main-header {
+        padding: 0 15px;
+    }
+    .main-header button{
+        display: none;
+    }
 
+    .header-left ul{
+        display: flex;
+        gap: 40px;
+        margin-left: 40px;
+    }
+    .header-left ul li{
+        font-size: 20px;
+        list-style: none;
+    }
+    .header-left ul li a{
+        color: var(--just-white);
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .header-left ul li a:hover{
+        color: var(--main-orange);
+    }
+    .main-header .main-button{
+        width: 160px;
+        height: 40px;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .hero-section h1{
+        font-size: 8rem;
+        margin-top: 60px;
+    }
+    
+    .hero-section img{
+        top: 280px;
+        width: 500px;
+    }
+    
+    .guisados-section__cards-container{
+        height: 500px;
+    }
+    .guisados-card{
+        width: 515px;
+        scroll-snap-align: center;
+    }
+    .guisados-card img{
+        width: 415px;
+        border-radius: 20px;
+        border: solid 1.5px var(--main-orange);
+    }
+    .lista-guisados picture:nth-child(1){
+        width: 450px;
+    }
+    .paquetes-section-card {
+        gap: 30px;
+        height: 80%;
+        overflow:auto;
+    }
+    .paquetes-section_taquiza{
+        width: 500px;
+    }
+    .description {
+        width: 500px;
+    }
+    .description p {
+        font-size: 24px;
+    }
+}

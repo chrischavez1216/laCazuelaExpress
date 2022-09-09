@@ -17,21 +17,33 @@
         </div>
         <div class="main-header">
             <div class="header-left"> 
-                <a href="index.html"><img src="./assets/img/cazuelaexpress-logo-circle.png" alt="La Cazuela Express - Logo"></a>
-                <button><img src="./assets/icons/menu-icon.png"></button>
+                <a href="./index.html"><img src="./assets/img/cazuelaexpress-logo-circle.png" alt="La Cazuela Express - Logo"></a>
+                <button class="mobile-menu-button"><img src="./assets/icons/menu-icon.png"></button>
+                <ul>
+                    <li><a href="#link-paquetes">Paquetes</a></li>
+                    <li><a href="#link-guisados">Guisados</a></li>
+                    <li><a href="#link-who">¿Quienes somos?</a></li>
+                </ul>
             </div>
-            <a href="./cotizacion/cotizacion.html" class="main-button">Haz tu cotización</a>
+            <a href="./cotizacion/cotizacion.html" class="main-button cotizacion-button">Haz tu cotización</a>
+        </div>
+        <div class="mobile-menu inactive">
+            <ul>
+                <li><a href="#link-paquetes">Paquetes</a></li>
+                <li><a href="#link-guisados">Guisados</a></li>
+                <li><a href="#link-who">¿Quienes somos?</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
         <section id="link-hero" class="hero-section">
-            <h1>TAQUIZAS PARA TUS EVENTOS</h1>
-            <img src="./assets/img/DESDE 60.png" alt="Desde $60">
+                <h1>TAQUIZAS PARA TUS EVENTOS</h1>
+                <img src="./assets/img/DESDE 60.png" alt="Desde $60">
         </section>
 
         <section id="link-paquetes"class="paquetes-section">
-            <div class="paquetes-section_taquiza">
+            <div class="paquetes-section_taquiza  paquetes-section-card">
                 <h2>PAQUETE <br> TAQUIZA</h2>
                 <p>A PARTIR DE 30 <br> PERSONAS</p>
                 <p>INCLUYE</p>
@@ -51,7 +63,7 @@
             </div>
         </section>
 
-        <section class="guisados-section">
+        <section class="guisados-section" id="link-guisados">
             <h2>CONOCE NUESTRA <br> GRAN VARIEDAD DE <br> GUISADOS</h2>
 
             <div class="guisados-section__cards-container">
@@ -70,33 +82,34 @@
 
                 <div class="guisados-card">
                     <img src="./assets/cards/longaniza-con-papas-card.png" alt="Foto de una peqeueña olla de barro con chicharron en salsa verde">
-                </div>
+                </div> 
 
                 <div class="guisados-card">
                     <img src="./assets/cards/picadillo-card.png" alt="Foto de un plato con picadillo">
-                </div>
+                </div> 
 
-                <div class="guisados-card">
-                    <img src="./assets/cards/picadillo-card.png" alt="Foto de un plato con picadillo">
-                </div>
-
-                <div class="guisados-card">
-                    <img src="./assets/cards/picadillo-card.png" alt="Foto de un plato con picadillo">
-                </div>
-
-                <div class="guisados-card">
-                    <img src="./assets/cards/picadillo-card.png" alt="Foto de un plato con picadillo">
-                </div>
-
-                <div class="guisados-card">
-                    <img src="./assets/cards/picadillo-card.png" alt="Foto de un plato con picadillo">
-                </div>
             </div>
 
-            <a href="" class="main-button">VER LISTA COMPLETA</a>
+            <p id="lista-button-taquiza"class="main-button taquiza-button">Ver lista de Taquizas</p>
+            <p id="lista-button-taquiza"class="main-button especialidades-button">Ver lista de Especialidades</p>
+            
+            <div class="lista-guisados lista-taquizas inactive">
+                <picture>
+                    <img class="icon-close" src="./assets/icons/cancel.png" alt="cancel-button">
+                    <img src="./assets/img/listas/lista-taquizas.jpeg" alt="Lista de guisados">
+                </picture>
+            </div>
+
+            <div class="lista-guisados lista-banquetes inactive">
+                <picture>
+                    <img class="icon-close icon-close-2" src="./assets/icons/cancel.png" alt="cancel-button">
+                    <img src="./assets/img/listas/lista-especialidades.jpeg" alt="Lista de guisados especiales">
+                </picture>
+            </div>
 
         </section>
-        <section class="who-section">
+
+        <section id="link-who"class="who-section">
             <h2>¿QUIENES SOMOS?</h2>
             <img src="./assets/img/laCazuelaExpress.png" alt="Logo de la cazuela express">
             <div class="description">
@@ -120,5 +133,7 @@
             <a href="https://wa.me/message/H7HMVH436CDOM1" class="social-logo"><img src="./assets/img/whatsappLogo.png" alt="Whatsapp"></a>
         </div>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>
